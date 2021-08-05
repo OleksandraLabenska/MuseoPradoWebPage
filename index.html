@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Museo Nacional de Prado</title>
+        <link rel="icon" href="logo.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Georama:wght@400;700&display=swap" rel="stylesheet" media="screen and (min-width: 600px">
+        <style>
+
+            /************COLOR*************/
+            body{
+                background: white;
+                --oscuro: black;
+                --claro: #202020;
+            }
+
+            /*************TIPOGRAFIA*******/
+            *{
+                font-family: sans-serif;
+
+            }
+
+            h1,h2,h3{
+                text-align: center;
+                color: var(--claro);
+            }
+
+            a{
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+            }
+
+
+
+            /******************FORMULARIO*************/
+            input, textarea{
+                font-size: 1rem;
+                color: var(--oscuro);
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+
+            input[type="submit"]{
+                color: white;
+                background: var(--oscuro);
+                padding: 5px 20px;
+                border: none;
+                border-radius: 4px;
+            }
+
+            input[type="submit"]:hover{
+                color: white;
+                box-shadow: 0 2px 6px grey;
+            }
+
+
+            /*******************ESTRUCTURA PEQUENIA**********/
+            /*****************ESTRUCTURA***************/
+            *{
+                box-sizing: border-box;
+            }
+
+            img{
+                width: 100%;
+            }
+
+            body{
+                margin: 0;
+            }
+
+            .anchototal{
+                width: 100%;
+            }
+
+            .contenedor{
+                margin: 0 20px;
+            }
+
+            .S-oculto{
+                display: none;
+            }
+
+            /******************ELEMENTOS*********/
+            nav{
+                background: var(--oscuro);
+                position: fixed;
+                top: 0;
+                left: 0;
+                text-align: center;
+                padding: 5px;
+
+            }
+
+            #logo{
+                width: 36px;
+                float: left;
+
+            }
+
+            nav a {
+                padding: 10px;
+            }
+
+            nav a:hover{
+                color: grey;
+            }
+
+            header img{
+                width: 120px;
+                box-shadow: 0 2px 6px grey;
+                border-radius: 50%;
+            }
+
+            section{
+                padding-top: 80px;
+            }
+
+            footer{
+                background: var(--oscuro);
+                text-align: center;
+                padding: 15px;
+                margin-top: 40px;
+            }
+
+            footer a{
+                padding: 10px;
+            }
+
+            footer a:hover{
+                color: white;
+            }
+
+            /*******************FIN PEQUENIA*********************************/
+
+            /*********************MEDIANO*******/
+            @media screen and (min-width: 600px){
+
+                body{
+                    color:#444;
+                }
+
+                *{
+                    font-family: "Georama", sans-serif;
+                }
+
+                h1, h2, h3, p{
+                    margin-top: 0;
+                }
+
+                h3{
+                    font-size: 1.7rem;
+                    text-align: left;
+                }
+
+                h2{
+                    font-size: 2.5rem;
+                }
+
+                h1{
+                    font-size: 3.3rem;
+                    color: aliceblue;
+                }
+
+                /**ESTRUCTURA*****/
+                .M-mitad{
+                    float: left;
+                    width: 50%;
+                    padding: 10px;
+                }
+
+                .L-tercio{
+                    overflow: hidden;
+                }
+                /******ELEMENTOS********/
+                nav{
+                    z-index: 4;
+                }
+
+                nav a{
+                    font-size: 1.2rem;
+                }
+
+                #logo{
+                    width: 48px;
+                }
+
+                header{
+                    position: absolute;
+                    width: 100%;
+                    top: 35vw;
+                    text-shadow: 0 2px 6px black;
+                }
+
+
+            }
+            /********************* FIN  MEDIANO*******/
+
+            /*********************GRANDE*******/
+            @media screen and (min-width: 1000px){
+
+                P{
+                    font-size: 1.15rem;
+                }
+
+                /*************ESTRUCTURA**************/
+                .M-mitad{
+                    float: none;
+                    width: 100%;
+                    padding: 0;
+                }
+
+                .L-tercio{
+                    float: left;
+                    width: 33.3%;
+                    padding: 20px;
+                }
+
+                .L-mitad{
+                    float: left;
+                    width: 50%;
+                    padding: 20px;
+                }
+
+                .contenedor{
+                    overflow: hidden;
+                    width:100%;
+                    max-width:1400px;
+                    margin: auto;
+                }
+
+                .izquierda{
+                    float: left;
+                }
+
+                .derecha{
+                    float:right;
+                }
+
+                .S-oculto{
+                    display: block;
+                }
+
+
+                /**************ELEMENTOS*************/
+                nav{
+                    padding: 10px;
+
+                }
+
+                nav a{
+                    font-size: 1.5rem;
+                }
+
+                #logo{
+                    width: 32px;
+                }
+
+                .L-oculto{
+                    display: none;
+                }
+
+                .marco{
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                .marco iframe{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+
+        <!-- NAV  -->
+        <nav class="anchototal">
+            <div class="contenedor">
+
+                <div class="izquierda">
+                    <a href="#"><img src="logo.jpg" id="logo">
+                        Museo Nacional del Prado</a>
+                </div>
+
+                <div class="derecha">
+                    <a href="#">Inicio</a>
+                    <a href="#Exibición">Exibición</a>
+                    <a href="#Localización">Localización</a>
+                    <a href="#Visita">Visita</a>
+                    <a href="#Contacto">Contacto</a>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <!--  PRESENTACION -->
+
+        <div class="L-oculto">
+            <img src="museo.jpg">
+            <p class="contenedor"><a href="https://www.youtube.com/watch?v=UDmzBJgP5RU" target="_blank"><i class="fab fa-youtube"></i>Play video</a></p> 
+        </div>
+
+        <div class="S-oculto marco">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KdQRjgvqxwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+        </div>
+        <article>
+           
+            <!-- HEADER  -->
+            <header>
+                <h1>Museo Nacional Del Prado</h1>
+            </header>
+
+
+            <!-- EXHIBITION  -->
+            <section id="Exibición" class="contenedor">
+
+                <h2>Exibición</h2>
+
+                <div class="L-tercio">
+                    <div class="M-mitad">
+                        <img src="pinturaXIX.jpg" >
+                    </div>
+
+                    <div class="M-mitad">
+                        <h3>PINTURA DEL SIGLO XIX</h3>
+                        <p>Las colecciones del Siglo XIX del Museo son, simultáneamente, las más numerosas y las menos conocidas entre los conjuntos de pintura conservados por el Prado. Procedentes en buena medida del Museo de Arte Moderno, que se integró en el Prado en 1971, fueron expuestas en el Casón del Buen Retiro entre esa fecha y 1997. En 2007, una selección de las mismas inauguró, bajo la rúbrica El siglo XIX en el Prado, las salas de la ampliación del Museo. Desde 2009 se exponen, en el edificio histórico de Villanueva, las pinturas más destacadas.</p>
+                    </div>
+                </div>
+
+                <div class="L-tercio">
+                    <div class="M-mitad">
+                        <img src="pinturaItaliana.jpg" >
+                    </div>
+
+                    <div class="M-mitad">
+                        <h3>PINTURA ITALIANA Y FRANCESA HASTA 1800</h3>
+                        <p>Como el resto de las colecciones pictóricas del Museo del Prado, la italiana y francesa está condicionada por su origen, localizado en la antigua colección real española. De ahí proceden sus piezas más valiosas, y conforme a este origen se justifican también sus principales carencias. Como la escasez de pinturas anteriores a 1500, que los monarcas españoles no se manifestaron tan dispuestos a coleccionar. El Prado tiene en sus salas obras de importantes artistas anteriores a la fecha citada: Fra Angelico, Antonello da Messina, Botticelli o Mantegna, aunque únicamente La dormición de la Virgen de este último proceda de la colección real. Tiziano constituye uno de los ejes conforme a los cuales se vertebra la colección pictórica del Prado por muy diversos motivos.</p>
+                    </div>
+                </div>
+
+                <div class="L-tercio">
+                    <div class="M-mitad">
+                        <img src="pinturaFlamenca.jpg" >
+                    </div>
+
+                    <div class="M-mitad">
+                        <h3>PINTURA FLAMENCA Y ESCUELAS DEL NORTE</h3>
+                        <p>El término pintura flamenca se refiere a la pintura realizada durante los siglos XV al XVII en una región que coincide aproximadamente con la actual Bélgica. En el siglo XV se comenzaron a producir allí cuadros que cautivaron a los amantes del arte de toda Europa por el realismo de los detalles y por el lustre de sus superficies, logrado gracias a una novedosa forma de utilizar la pintura al óleo. Debido a que desde finales del siglo XV España y los antiguos Países Bajos estaban bajo el gobierno común de la dinastía de los Habsburgo, los reyes de España se encontraban en una posición ventajosa para coleccionar pintura de esos territorios. Como consecuencia de ello, el Museo del Prado tiene una de las mejores y mayores colecciones de pintura flamenca que existen, con un total de cerca de 1.000 cuadros.</p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!--  LOCATION  -->
+            <section id="Localización" class="anchototal">
+                <h2>Localización</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12151.109604603413!2d-3.6921271!3d40.4137818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1094f07d93ad885a!2sMuseo%20Nacional%20del%20Prado!5e0!3m2!1ses!2ses!4v1628182548826!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section> 
+
+
+            <!-- VISIT  -->
+            <section id="Visita" class="contenedor">
+                <h2>Visita</h2>
+
+                <div class="L-tercio">
+                    <div class="M-mitad">
+                        <img src="exibition.jpg" >
+                    </div>
+
+                    <div class="M-mitad">
+                        <h3>EXPOSICIONES</h3>
+                        <p>El legado de Carmen Sánchez. La última lección
+                            23/03/2021-24/10/2021
+                            En la sala 60 del edificio Villanueva, el visitante del Museo Nacional del Prado podrá contemplar las obras adquiridas gracias al legado de Carmen Sánchez García, Amiga del Museo del Prado, fallecida en Madrid en 2016 a los 86 años de edad, bajo el título “El legado de Carmen Sánchez. La última lección”. De acuerdo con el deseo expresado en su tes...</p>
+                    </div>
+                </div>
+
+                <div class="L-tercio">
+                    <div class="M-mitad">
+                        <img src="actividades.jpg" >
+                    </div>
+
+                    <div class="M-mitad">
+                        <h3>ACTIVIDADES</h3>
+                        <p>Itinerarios incómodos. Nuevas masculinidades
+                            El Museo retoma las visitas dialogadas, entendidas como espacio de conversación en las que la intervención del público es fundamental, planteando la necesidad de convivir dentro del espacio incómodo que se crea cuando no hay conceptos establecidos ni criterios únicos sobre temas que nos afectan a todos.</p>
+                    </div>
+                </div>
+
+                <div class="L-tercio">
+                    <div class="M-mitad">
+                        <img src="interactivos.jpg" >
+                    </div>
+
+                    <div class="M-mitad">
+                        <h3>INTERACTIVOS</h3>
+                        <p>Futuros Mitos. Proyecto Deslizar
+                            Este laboratorio versa sobre el cuidado como bien necesario para cambiar nuestra perspectiva sobre los desechos y el valor de las cosas materiales e inmateriales. El proyecto plantea construir nuevas narrativas de futuro. Para ello se propone un proceso en el cual nos convertimos en investigadores activos; en productores en lugar de meros consumidores; en exploradores de la memoria de los objetos, de sus posibilidades materiales y de su potencial creativo.</p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!--  CONTACTO  -->
+            <section id="Contacto" class="contenedor">
+                <h2>Contacto</h2>
+
+                <div class="L-mitad">
+                    <p>Tienes alguna duda?</p>
+                    <form action="http://www.cursos-diseno.es/mostrar.php" method="post">
+                        Nombre<br>
+                        <input type="text" name="nombre" class="anchototal"><br>
+                        Apellido<br>
+                        <input type="text" name="apellidos" class="anchototal">
+
+                        <table class="anchototal">
+                            <tr>
+                                <td>Telefono<br>
+                                    <input type="tel"  name="telefono" class="anchototal"></td>
+                                <td>Email<br>
+                                    <input type="email" name="email" class="anchototal" ></td>
+                            </tr>
+                        </table>
+
+                        Mensaje<br>
+                        <textarea name="mensaje" rows="4" class="anchototal"></textarea><br>
+                        <input type="submit">
+
+                        <input type="hidden" name="destinatario" value="oleksandra_labenska_tsapp1oa2021@cev.com">
+
+                        <input type="hidden" name="redireccion" value="http://www.zefirka.epizy.com/">
+                    </form>
+                </div>
+
+                <div class="L-mitad">
+                    <p><a href="https://www.museodelprado.es/" target="_blank">Museo Nacional del Prado</a></p>
+
+                    <p>MUSEO NACIONAL DEL PRADO Calle Ruiz de Alarcón 23 28014 Madrid<br> 913 30 28 00</p>
+
+                    <h4>ABIERTO</h4>
+                    De lunes a sábado de 10.00 a 20.00 h<br>
+                    Domingos y festivos de 10.00 a 19.00 h<br>
+
+                    <h4>CERRADO</h4>
+                    1 de enero<br>
+                    1 de mayo<br>
+                    25 de diciembre<br>
+
+                    <h4>HORARIO GRATUITO</h4>
+                    De lunes a sábado de 18.00 a 20.00 h<br>
+                    Domingos y festivos de 17.00 a 19.00 h<br>
+                </div>
+
+            </section>
+        </article>
+
+        <!-- FOOTER -->
+        <footer class="anchototal">
+            <div class="contenedor">
+                <div class="derecha">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Google+</a>
+                </div>
+
+                <div class="izquierda">
+                    <a href="#">Copyright & image licensing</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of use</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
